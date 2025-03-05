@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" href="main.css">
+  
+  <title>Frontend Mentor | Conference ticket generator</title>
+</head>
+<body>
+  <div id="svg1"><img src="./assets/images/pattern-squiggly-line-top.svg" alt="sguilly-lines"></div>
+  <div id="svg2"><img src="./assets/images/pattern-circle.svg" alt="circle"></div>
+  <div id="svg3"><img src="./assets/images/pattern-squiggly-line-bottom-desktop.svg" alt="sguilly-lines"></div>
+  <div id="svg4"><!-- <img src="./assets/images/pattern-lines.svg" alt=""> --></div>
+  <main id="main">
+    <div id="main-div">
+      <div><img src="./assets/images/logo-full.svg" alt="logo-full"></div>
+      <p id="p1">Your Journey to Coding Conf 2025 Starts Here!</p>
+      <p id="p2">Secure your spot at next year's biggest coding conference.</p>
+      <p id="p3">Upload Avatar</p>
+      <div id="some-div">
+        <label for="input-file" id="drop-area">
+          <input type="file" id="input-file" accept="image/*" hidden>
+          <div id="img-view">
+            <img src="./assets/images/icon-upload.svg" alt="upload img">
+            <p>Drag and drop or click to upload</p>
+          </div>
+          <br>
+        </label>
+      </div>
+      <div id="image-holder">
+        <div id="comp-view">
+          <div id="fin-img"></div>
+          <div id="img-buttons">
+            <div id="btn1">Remove image</div>
+            <label id="btn2" for="input-file">Change image</label>
+          </div>
+        </div>
+      </div>
+      <div id="text1"><span>&#9432;</span> Upload your photo (JPG or PNG, max size: 500KB).</div>
+      <p id="p4">Full Name</p>
+      <input type="text" id="input1">
+      <p id="vd1"><span>&#9432</span> Please enter your name</p>
+      <p id="p5">Email Address</p>
+      <input type="text" id="input2" placeholder="example@email.com">
+      <p id="vd2"><span>&#9432</span> Please enter a valid email address</p>
+      <p id="p6">Github Username</p>
+      <input type="text" id="input3" placeholder="@yourusername">
+      <p id="vd3"><span>&#9432</span> Please enter your github username</p>
+      <button id="b1">Generate My Ticket</button><br><br><br>
+    </div>
+  </main>
+  <section id="section1">
+    <div><img src="./assets/images/logo-full.svg"></div>
+    <p id="line1">Congrats, <span id="name-span">Jonathan Kristof</span>!</p>
+    <p id="line2">Your ticket is ready</p>
+    <p id="line3">We've emailed your ticket to <span id="email-span">jonatan@email.com</span> and will send updates in the run up to the event.</p>
+    <div id="ticket">
+      <div id="ticket-info">
+        <div id="conf-details">
+          <img src="./assets/images/logo-full.svg">
+          <p>Jan 31, 2025 / Austin, TX</p>
+        </div>
+        <div id="pes-details">
+          <div id="pro-pic"></div>
+          <div id="cust">
+            <p id="cust-name">Jonatan Kristof</p>
+            <div id="cust-github"><img src="./assets/images/icon-github.svg" alt="github"> <p id="git-handle">@jonatankristof0101</p></div>
+          </div>
+        </div>
+      </div>
+      <div id="ticket-num">#01609</div>
+    </div>
+  </section>
+  <script src="script.js"></script>
+</body>
+</html>
+
+<!--   Your Journey to Coding Conf 2025 Starts Here!
+
+  Secure your spot at next year's biggest coding conference.
+
+  Upload Avatar
+  Drag and drop or click to upload
+  Upload your photo (JPG or PNG, max size: 500KB).
+
+  Full Name
+
+  Email Address
+  example@email.com
+
+  GitHub Username
+  @yourusername
+
+  Generate My Ticket
+
+  Congrats, ! Your ticket is ready.
+
+  We've emailed your ticket to  and will send updates in the run up to the event.
+
+  Coding Conf
+  Jan 31, 2025 / Austin, TX -->
