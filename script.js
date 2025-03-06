@@ -67,16 +67,16 @@ submitButton.addEventListener("click", function(){
         document.getElementById("text1").style.color = "hsl(7, 71%, 60%)"
         document.getElementById("text1").style.marginRight = "340px"
     }
-    else if (firstInput.value == ""){
+    if (firstInput.value == ""){
         inputVd1.style.display = "block"
     }
-    else if(secondInput.value == "" || !regex.test(secondInput.value)){
+    if(secondInput.value == "" || !regex.test(secondInput.value)){
         inputVd2.style.display = "block"
     }
-    else if (thirdInput.value == ""){
+    if (thirdInput.value == ""){
         inputVd3.style.display = "block"
     }
-    else if (inputFile.files[0].size > 500000){
+    if (inputFile.files[0].size > 500000){
         document.getElementById("text1").innerHTML ="<span>&#9432;</span> File too large, please upload a file less than 500kb."
         document.getElementById("text1").style.color = "hsl(7, 71%, 60%)"
         document.getElementById("text1").style.marginRight = "130px"
