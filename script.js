@@ -25,6 +25,8 @@ var regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
 inputFile.addEventListener("change", uploadImage);
 
+
+//function to create a url of the uploaded image
 function uploadImage(){
     let imgLink = URL.createObjectURL(inputFile.files[0]);
     console.log(imgLink)
@@ -36,10 +38,13 @@ function uploadImage(){
     finImg.style.backgroundImage = `url(${imgLink})`;
 }
 
+//remove the default behaviour of the drop area to make images dragable to it
 dropArea.addEventListener("dragover", function(e){
     e.preventDefault();
 });
 
+
+//making the label accept images and displaying them
 dropArea.addEventListener("drop", function(e){
     e.preventDefault();
     inputFile.files = e.dataTransfer.files;
@@ -56,11 +61,13 @@ imageHolder.addEventListener("drop", function(e){
     uploadImage();
 })
 
+//handling the removal of the image
 removeImage.addEventListener("click", function(){
     imageHolder.style.display = "none"
     dropArea.style.display = "block"
 })
 
+//checking if all parameters are fulfilled to proceed with submitting
 submitButton.addEventListener("click", function(){
     if(finImg.style.backgroundImage == ""){
         document.getElementById("text1").innerHTML ="<span>&#9432;</span> No picture selected."
@@ -70,12 +77,14 @@ submitButton.addEventListener("click", function(){
     else if (firstInput.value == ""){
         inputVd1.style.display = "block"
     }
+    //checks if email format is valid
     else if(secondInput.value == "" || !regex.test(secondInput.value)){
         inputVd2.style.display = "block"
     }
     else if (thirdInput.value == ""){
         inputVd3.style.display = "block"
     }
+    //checks if the file is larger than 500kb
     else if (inputFile.files[0].size > 500000){
         document.getElementById("text1").innerHTML ="<span>&#9432;</span> File too large, please upload a file less than 500kb."
         document.getElementById("text1").style.color = "hsl(7, 71%, 60%)"
